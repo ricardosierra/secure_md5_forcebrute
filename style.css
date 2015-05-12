@@ -1,0 +1,60 @@
+.main {
+	background-color:#333;
+	text-align:left;
+	margin:0 auto;
+	width:600px;
+	position:absolute;
+	top:200px;
+	right:50px;
+	width:600px;
+	font-size:70%;
+	left:50px;
+}
+
+h1 {
+	color:#FFF;
+	font-family:"Gill Sans";
+}
+
+h2 {
+	color:#FFF;
+}
+
+form {
+	background-color:#333;
+	color:#FFF;
+}
+
+input {
+	color:#FFF;
+	text-align:center;
+}
+
+.no {
+	color:#000;
+}
+
+.yes {
+	color:#FFF;
+}
+
+A:link {
+	text-decoration:none;
+	color:#FFF;
+}
+
+A:visited {
+	text-decoration:none;
+	color:#FFF;
+}
+A:hover {
+	text-decoration: underline;
+}
+A:active {
+	text-decoration:none;
+	color:#FFF;
+}
+
+body {
+	background-color:#333;
+}
