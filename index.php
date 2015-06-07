@@ -1,3 +1,6 @@
+<?php
+include('Config.php');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
@@ -20,9 +23,9 @@
                         echo "SHA1: $string2 <br>";
                                require('sql.php');
                 /*Select the DB */
-                    mysql_select_db("encrypt", $connect);
+                    mysql_select_db("Sierra_App", $connect);
                     /* Insert value into DB */
-                    $sql = "INSERT INTO encryptions (ID, plaintext, md5, sha1) ".
+                    $sql = "INSERT INTO App_Seguranca_Descriptografia (id,senha, md5, sha1,hash) ".
                         "VALUES ('','$_POST[test]', '$string1', '$string2')";
                     /* Execute the Query*/
                     mysql_query($sql,$connect);

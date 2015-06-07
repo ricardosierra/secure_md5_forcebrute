@@ -1,8 +1,8 @@
 <?php
         /* Connect to MySQL Database */
-            $host = "HOSTNAME";
-            $user = "USERNAME";
-            $password = "PASSWORD";
+            $host = "localhost";
+            $user = "root";
+            $password = "jmedtyqw";
             
             $connect = mysql_connect($host, $user, $password);
             if (!$connect)
