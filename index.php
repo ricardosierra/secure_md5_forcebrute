@@ -21,14 +21,12 @@ include('Config.php');
                         $string2 = sha1($string);
                         echo "MD5: $string1 <br>";
                         echo "SHA1: $string2 <br>";
-                               require('sql.php');
                 /*Select the DB */
-                    mysql_select_db("Sierra_App", $connect);
                     /* Insert value into DB */
                     $sql = "INSERT INTO App_Seguranca_Descriptografia (id,senha, md5, sha1,hash) ".
                         "VALUES ('','$_POST[test]', '$string1', '$string2')";
                     /* Execute the Query*/
-                    mysql_query($sql,$connect);
+                    $sqli->query($sql,$connect);
                     }
                 crypto($_POST[test]);
                 };

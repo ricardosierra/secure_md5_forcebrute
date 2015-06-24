@@ -1,12 +1,6 @@
 <?php
-        /* Connect to MySQL Database */
-            $host = "localhost";
-            $user = "root";
-            $password = "jmedtyqw";
-            
-            $connect = mysql_connect($host, $user, $password);
-            if (!$connect)
-            {
-                die('Something is wrong. Could not connect: ' . mysql_error());
-            }
-        ?>
+define('SIS_SERVER', 'localhost');
+define('SIS_USUARIO', 'root');
+define('SIS_SENHA', 'jmedtyqw');
+define('SIS_BANCO', 'Sierra_App');
+?>

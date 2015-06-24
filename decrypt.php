@@ -25,11 +25,10 @@ include('Config.php');
 require('sql.php');
 if(isset($_POST['Submit'])){
     /*Select the DB */
-    mysql_select_db("Sierra_App", $connect);
-    $sql = mysql_query("SELECT * FROM App_Seguranca_Descriptografia WHERE hash='$_POST[hash]' AND (md5 = '$_POST[decrypt]' OR sha1 = '$_POST[decrypt]') LIMIT 1");
-    while($row = mysql_fetch_array($sql))
+    $query_result = $sqli->query("SELECT * FROM App_Seguranca_Descriptografia WHERE hash='$_POST[hash]' AND (md5 = '$_POST[decrypt]' OR sha1 = '$_POST[decrypt]') LIMIT 1");
+    while($row = $query_result->fetch_object())
     {
-        echo $_POST['decrypt'].": ".$row['senha']."<br>"; exit;
+        echo $_POST['decrypt'].": ".$row->senha."<br>"; exit;
     }
 }
 
